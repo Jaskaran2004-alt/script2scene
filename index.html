@@ -3,59 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Script2Scene - Turn Scripts into Videos</title>
+  <title>Script2Scene - AI Video Tool</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
     <div class="logo">Script2Scene</div>
-    <nav>
-      <a href="#">Documentation</a>
-      <a href="#">Pricing</a>
-      <a href="#">Sign Up</a>
-    </nav>
-    <button class="btn primary">Sign Up</button>
   </header>
 
-  <main class="hero">
-    <div class="hero-text">
-      <h1>Convert scripts into engaging videos</h1>
-      <p>Turn your written scripts into dynamic, professional videos in just a few steps.</p>
-      <button class="btn get-started">Get Started</button>
-    </div>
-    <div class="hero-video">
-      <div class="video-box">
-        <div class="video-screen">Transform text into dynamic, engaging videos</div>
-        <div class="video-controls">▶︎ 00:08 / 1:24 ⛶</div>
+  <main class="main">
+    <section class="editor">
+      <h2>Write Your Script</h2>
+      <textarea id="scriptInput" placeholder="Write your script here. Use '---' to break scenes."></textarea>
+      <div class="controls">
+        <label for="voiceSelect">Voice:</label>
+        <select id="voiceSelect"></select>
+        <label for="speedRange">Speed:</label>
+        <input type="range" id="speedRange" min="0.5" max="2" value="1" step="0.1" />
+        <button onclick="playScript()">▶ Play</button>
+        <button onclick="stopScript()">⏹ Stop</button>
       </div>
-    </div>
+    </section>
+
+    <section class="preview">
+      <h2>Scene Preview</h2>
+      <div id="sceneContainer"></div>
+    </section>
   </main>
 
-  <section class="features">
-    <div class="feature">
-      <div class="icon">📝</div>
-      <h3>Write</h3>
-      <p>Compose your script with ease using our flexible text editor.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🎨</div>
-      <h3>Style</h3>
-      <p>Customize the visual style to match your brand and message.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🎙️</div>
-      <h3>Add Audio</h3>
-      <p>Enhance your videos with voiceovers and background music.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🎬</div>
-      <h3>Preview & Export</h3>
-      <p>Watch your video, make adjustments, and export the final product.</p>
-    </div>
-  </section>
-
   <footer>
-    <p>© 2025 Script2Scene. All rights reserved.</p>
+    <p>© 2025 Script2Scene. Free AI Video Generator.</p>
   </footer>
 
   <script src="script.js"></script>
